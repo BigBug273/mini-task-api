@@ -3,11 +3,13 @@ import jwt
 import datetime
 import requests
 from functools import wraps
+import os
 
 app = Flask(__name__)
 
 # CONFIG
-app.config["SECRET_KEY"] = "my_super_secret_key_2026"
+
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "fallback_secret")
 
 # ใส่ URL ของกลุ่มเพื่อน
 # ตัวอย่าง: FRIEND_API_URL = "https://friend-group-api.onrender.com/tasks"
