@@ -223,7 +223,7 @@ Deployed on Render
 ### URL
 
 ```
-[https://your-api-url.com](https://mini-task-api.onrender.com)
+https://mini-task-api.onrender.com
 ```
 
 ---
