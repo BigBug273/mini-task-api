@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "907d748a-6442-48f2-a3b2-10eb972485c6",
+    "name": "mini-api-task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49717906",
+    "_collection_link": "https://go.postman.co/collection/49717906-907d748a-6442-48f2-a3b2-10eb972485c6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"student\",\n  \"password\": \"1234\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mini-task-api.onrender.com/login",
+          "protocol": "https",
+          "host": [
+            "mini-task-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "login"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "See your task/s",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0dWRlbnQiLCJleHAiOjE3NzQ1OTU0NDV9.VsvAeUoT9GDl7puGzq-2XGKr_KJr6fESxi9RKbMOmR8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mini-task-api.onrender.com/tasks",
+          "protocol": "https",
+          "host": [
+            "mini-task-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0dWRlbnQiLCJleHAiOjE3NzQ1OTU0NDV9.VsvAeUoT9GDl7puGzq-2XGKr_KJr6fESxi9RKbMOmR8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Finish assignment\",\r\n  \"status\": \"done\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mini-task-api.onrender.com/tasks",
+          "protocol": "https",
+          "host": [
+            "mini-task-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "See other's task/s",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://mini-task-api.onrender.com/external-tasks",
+          "protocol": "https",
+          "host": [
+            "mini-task-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "external-tasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
