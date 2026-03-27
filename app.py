@@ -4,8 +4,10 @@ import datetime
 import requests
 from functools import wraps
 import os
+from flasgger import Swagger
 
 app = Flask(__name__)
+Swagger(app)
 
 # CONFIG
 
