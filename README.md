@@ -218,13 +218,9 @@ Authorization: Bearer <token>
 
 ## 🌐 Deployment
 
-ระบบสามารถ Deploy บน platform เช่น:
+Deployed on Render
 
-* Render
-* Railway
-* PythonAnywhere
-
-### URL (ใส่ของจริง)
+### URL https://mini-task-api.onrender.com
 
 ```
 https://your-api-url.com
