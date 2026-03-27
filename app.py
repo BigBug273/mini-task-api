@@ -182,7 +182,13 @@ def get_external_tasks():
         return error_response(500, "Friend API URL is not configured yet")
 
     try:
-        response = requests.get(FRIEND_API_URL, timeout=5)
+        response = requests.get(
+            FRIEND_API_URL,
+            headers={
+                "Authorization": "Bearer YOUR_FRIEND_TOKEN"
+            },
+            timeout=5
+        )
 
         # ถ้า API เพื่อนตอบกลับไม่สำเร็จ
         if response.status_code != 200:
