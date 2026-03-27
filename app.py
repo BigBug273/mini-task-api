@@ -187,7 +187,7 @@ def get_external_tasks():
             "https://mini-task-management-api.onrender.com/login",
             json={
                 "username": "student",
-                "password": "1234"
+                "password": "HeyYoMyfriend"
             }
         )
         
