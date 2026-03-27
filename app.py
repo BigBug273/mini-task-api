@@ -185,7 +185,7 @@ def get_external_tasks():
         response = requests.get(
             FRIEND_API_URL,
             headers={
-                "Authorization": "Bearer YOUR_FRIEND_TOKEN"
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic3R1ZGVudCIsImV4cCI6MTc3NDYwOTU2NX0.DAjXCiX6ZdLsJ8i53CxhX-bJHMVmtvmdvgA_rPQbfrY"
             },
             timeout=5
         )
