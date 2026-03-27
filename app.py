@@ -182,10 +182,22 @@ def get_external_tasks():
         return error_response(500, "Friend API URL is not configured yet")
 
     try:
+        # login to friend API first
+        login_res = requests.post(
+            "https://mini-task-management-api.onrender.com/login",
+            json={
+                "username": "student",
+                "password": "1234"
+            }
+        )
+        
+        friend_token = login_res.json().get("token")
+        
+        # use token to fetch tasks
         response = requests.get(
             FRIEND_API_URL,
             headers={
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic3R1ZGVudCIsImV4cCI6MTc3NDYwOTU2NX0.DAjXCiX6ZdLsJ8i53CxhX-bJHMVmtvmdvgA_rPQbfrY"
+                "Authorization": f"Bearer {friend_token}"
             },
             timeout=5
         )
