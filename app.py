@@ -13,7 +13,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "fallback_secret")
 
 # ใส่ URL ของกลุ่มเพื่อน
 # ตัวอย่าง: FRIEND_API_URL = "https://friend-group-api.onrender.com/tasks"
-FRIEND_API_URL = ""
+FRIEND_API_URL = "https://mini-task-management-api.onrender.com"
 
 # user สำหรับ demo login
 USER_DATA = {
