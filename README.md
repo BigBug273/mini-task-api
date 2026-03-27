@@ -262,7 +262,9 @@ FRIEND_API_URL = "https://friend-api.com/tasks"
 mini-task-api/
 ├── app.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── postman_collection.json
+
 ```
 
 ---
@@ -270,6 +272,7 @@ mini-task-api/
 ## 👥 Team
 
 1660902881 นายอภิรัตน์ แจ่มใส
+
 1660903699 นายณภัทร รัตนบุรี
 
 ---
