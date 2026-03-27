@@ -151,6 +151,80 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "other's login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic3R1ZGVudCIsImV4cCI6MTc3NDYwNzg5OX0.W7-dDYrZummwOXC0ZrleN9q0cIKWCj7SMnAd4NNL6f8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\" : \"student\",\r\n    \"password\" : \"HeyYoMyfriend\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mini-task-management-api.onrender.com/login",
+          "protocol": "https",
+          "host": [
+            "mini-task-management-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "see other's task/s on their backend",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic3R1ZGVudCIsImV4cCI6MTc3NDYwNzg5OX0.W7-dDYrZummwOXC0ZrleN9q0cIKWCj7SMnAd4NNL6f8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://mini-task-management-api.onrender.com/tasks",
+          "protocol": "https",
+          "host": [
+            "mini-task-management-api",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
