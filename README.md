@@ -271,16 +271,6 @@ mini-task-api/
 
 ---
 
-## 🎥 Video Requirement
-
-วิดีโอต้องมี:
-
-* อธิบายระบบ
-* Demo API (login, tasks, external)
-* อธิบายโค้ดสำคัญ (JWT, error, external)
-
----
-
 ## 👥 Team
 
 1660902881 นายอภิรัตน์ แจ่มใส
